@@ -438,6 +438,8 @@ var Config;
             Characters.normalPreTailHeight = 2;
             /** For Kto characters that are at the end of a word, the height of the space between the end of the segments and the end of the character. */
             Characters.lastCharTailHeight = 6;
+            /** For the Kto head segments deriving from 'o', the percentage of the head that is not the curved/empty section. */
+            Characters.oDerivativeFlatSectionRatio = 11 / 16;
             /** Whether to force segment columns to be the empty segment length at minimum. */
             Characters.extendSmallCharsToMinSize = true;
         })(Characters = Draw.Characters || (Draw.Characters = {}));
@@ -975,7 +977,7 @@ var Render;
             g.appendChild(Svg.path(`
           M ${dims.x + dims.width / 4} ${dims.y}
           l ${-dims.width / 4} ${dims.height}
-          l ${dims.width / 2} 0
+          l ${dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 0 ${dims.height} ${-dims.height}
         `));
             return dims;
@@ -1020,7 +1022,7 @@ var Render;
             // o arc
             g.appendChild(Svg.path(`
           M ${dims.x + dims.width} ${dims.height}
-          l ${-dims.width / 2} 0
+          l ${-dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 1 ${-dims.height} ${-dims.height}
         `));
             // i line
@@ -1035,7 +1037,7 @@ var Render;
             g.appendChild(Svg.path(`
           M ${dims.x + dims.width * (3 / 4)} ${dims.y}
           l ${dims.width / 4} ${dims.height}
-          l ${-dims.width / 2} 0
+          l ${-dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 1 ${-dims.height} ${-dims.height}
         `));
             return dims;

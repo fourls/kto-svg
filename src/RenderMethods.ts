@@ -270,7 +270,7 @@ namespace Render {
         g.appendChild(Svg.path(`
           M ${dims.x + dims.width/4} ${dims.y}
           l ${-dims.width/4} ${dims.height}
-          l ${dims.width/2} 0
+          l ${dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 0 ${dims.height} ${-dims.height}
         `));
 
@@ -323,7 +323,7 @@ namespace Render {
         // o arc
         g.appendChild(Svg.path(`
           M ${dims.x + dims.width} ${dims.height}
-          l ${-dims.width/2} 0
+          l ${-dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 1 ${-dims.height} ${-dims.height}
         `));
         
@@ -343,7 +343,7 @@ namespace Render {
         g.appendChild(Svg.path(`
           M ${dims.x + dims.width*(3/4)} ${dims.y}
           l ${dims.width/4} ${dims.height}
-          l ${-dims.width/2} 0
+          l ${-dims.width * Config.Draw.Characters.oDerivativeFlatSectionRatio} 0
           a ${dims.height} ${dims.height} 0 0 1 ${-dims.height} ${-dims.height}
         `));
 

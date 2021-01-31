@@ -46,6 +46,9 @@ namespace Config {
       /** For Kto characters that are at the end of a word, the height of the space between the end of the segments and the end of the character. */
       export const lastCharTailHeight = 6;
 
+      /** For the Kto head segments deriving from 'o', the percentage of the head that is not the curved/empty section. */
+      export const oDerivativeFlatSectionRatio = 11/16;
+
       /** Whether to force segment columns to be the empty segment length at minimum. */
       export const extendSmallCharsToMinSize = true;
     }
