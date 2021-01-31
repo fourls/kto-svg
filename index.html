@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="content">
+      <h1>Kto Transcription</h1>
+      <form id="transcribe-form">
+        <!-- <input type="text" id="textfield"/> -->
+        <textarea id="textfield"></textarea>
+        <input class="btn" type="submit" value="Transcribe"/>
+      </form>
+      <button class="btn" id="download">Download SVG</button>
+      <p id="debug-msg"></p>
+    </div>
+    <div class="display">
+      <svg id="svg-root" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        Something's gone wrong. :(
+      </svg>
+    </div>
+  </main>
+
+  <script src="dist/script.js"></script>
+</body>
+</html>
